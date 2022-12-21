@@ -49,7 +49,7 @@ console.log(foo(bar));
 function foo2(callback: () => 2) {
     // now, foo2 receives a function with no parameters that returns 2
     console.log("this is foo2");
-    return callback(); // it's infeered that the return type of the function foo2 is number
+    return callback(); // it's inferred that the return type of the function foo2 is number
 }
 
 function bar2(): 2 {
@@ -77,3 +77,4 @@ function bar3(): 2 | 3 {
 }
 
 console.log(foo3(bar3));
+
