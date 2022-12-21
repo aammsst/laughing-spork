@@ -78,3 +78,23 @@ function bar3(): 2 | 3 {
 
 console.log(foo3(bar3));
 
+// Generic functions
+// Example taken from TS Handbook
+function firstElement<Type>(arr: Type[]): Type | undefined {
+    // This function can receive generic types, and return a type that corresponds to the type it received
+    return arr[0];
+}
+
+const s = firstElement(["a","b","c"]); // string
+const n = firstElement([1,2,3]); // number
+const b = firstElement([true, false, true]); // boolean
+const u = firstElement([]); // undefined
+
+// Iference
+function myMap<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[] {
+    // This function can infer the types used as inputs and outputs
+    return arr.map(func);
+}
+
+const parse = myMap(["1", "2", "3"], (n)=>parseInt(n)); // here we send string[] and receive number[]
+const unParse = myMap([1,2,3], (n)=>n.toString()); // Here we send number[] and receive string[] with the same function myMap

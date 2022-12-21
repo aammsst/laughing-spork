@@ -42,3 +42,15 @@ function bar3() {
     return 3;
 }
 console.log(foo3(bar3));
+function firstElement(arr) {
+    return arr[0];
+}
+const s = firstElement(["a", "b", "c"]);
+const n = firstElement([1, 2, 3]);
+const b = firstElement([true, false, true]);
+const u = firstElement([]);
+function myMap(arr, func) {
+    return arr.map(func);
+}
+const parse = myMap(["1", "2", "3"], (n) => parseInt(n));
+const unParse = myMap([1, 2, 3], (n) => n.toString());
