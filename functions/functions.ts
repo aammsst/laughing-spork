@@ -97,4 +97,26 @@ function myMap<Input, Output>(arr: Input[], func: (arg: Input) => Output): Outpu
 }
 
 const parse = myMap(["1", "2", "3"], (n)=>parseInt(n)); // here we send string[] and receive number[]
+console.log(parse);
 const unParse = myMap([1,2,3], (n)=>n.toString()); // Here we send number[] and receive string[] with the same function myMap
+console.log(unParse);
+
+// Constraints
+// We can use a constraint to limit the kinds of types that a parameter can accepts
+function longest<Type extends { length: number }>(a: Type, b: Type) {
+    // This function returns the longer of two values, if it exists
+    // We use extends to constrain the type parameter to a type that has the length property
+    if (a.length > b.length) { // that constrain allows us to acces the .length property of a and b
+        return a;
+    } else if (a.length < b.length){
+        return b;
+    } else {
+        return "same length!";
+    }
+}
+
+const longerArr = longest([1,2], [3,2,1]);
+console.log(longerArr);
+const longerStr = longest("Fabri", "NoFabri");
+console.log(longerStr);
+// This last function won't allow us to use a number or a boolean type since those types do not have a length property

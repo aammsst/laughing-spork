@@ -53,4 +53,21 @@ function myMap(arr, func) {
     return arr.map(func);
 }
 const parse = myMap(["1", "2", "3"], (n) => parseInt(n));
+console.log(parse);
 const unParse = myMap([1, 2, 3], (n) => n.toString());
+console.log(unParse);
+function longest(a, b) {
+    if (a.length > b.length) {
+        return a;
+    }
+    else if (a.length < b.length) {
+        return b;
+    }
+    else {
+        return "same length!";
+    }
+}
+const longerArr = longest([1, 2], [3, 2, 1]);
+console.log(longerArr);
+const longerStr = longest("Fabri", "NoFabri");
+console.log(longerStr);
