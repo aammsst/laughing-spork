@@ -4,7 +4,7 @@
     "module": "commonjs",
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": "../results/",
+    "outDir": "results/",
     "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
