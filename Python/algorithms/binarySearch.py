@@ -1,5 +1,6 @@
 import math
 
+
 def biSearch(array, value):
     hi = len(array)
     lo = 0
@@ -12,6 +13,7 @@ def biSearch(array, value):
         else:
             lo = mid + 1
     return False
+
 
 array1 = [1, 2, 3, 5, 7, 8, 9]
 array2 = [3, 4, 6, 8, 9, 11, 17]

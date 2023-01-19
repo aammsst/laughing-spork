@@ -1,17 +1,16 @@
 def bubbleSort(array):
 
     i = 0
-
-    while (i<len(array)):
+    while (i < len(array)):
 
         j = 0
-        while (j<(len(array)-1-i)):
+        while (j < (len(array)-1-i)):
 
-            if (array[j]>array[j+1]):
+            if (array[j] > array[j+1]):
 
                 swap = array[j+1]
                 array[j+1] = array[j]
-                array[j]=swap
+                array[j] = swap
 
             j += 1
 
@@ -19,8 +18,9 @@ def bubbleSort(array):
 
     return array
 
-array1 = [5,3,4,6,1,8,7]
-array2 = [7,6,5,4,3,2,1]
+
+array1 = [5, 3, 4, 6, 1, 8, 7]
+array2 = [7, 6, 5, 4, 3, 2, 1]
 
 bubbleSort(array1)
 bubbleSort(array2)
